@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso de Privacidad</title>
+  <style>
+    #privacy-content {
+      display: none;
+      padding: 20px;
+      font-size: 16px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+    }
+
+    #privacy-notice {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    /* Estilos para el formulario */
+    form {
+      margin-top: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Aviso de privacidad (popup) -->
+<div id="privacy-notice">
+  <p>De conformidad con lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, Jose Velasco pone a su disposición el siguiente aviso de privacidad.</p>
+  <button onclick="acceptPrivacy()">Aceptar</button>
+</div>
+
+<!-- Contenido del Aviso de Privacidad -->
+<div id="privacy-content">
+  <p>
+    Jose Manuel Velasco Garcia, es responsable del uso y protección de sus datos personales, en este sentido y atendiendo las obligaciones legales establecidas en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, a través de este instrumento se informa a los titulares de los datos, la información que de ellos se recaba y los fines que se le darán a dicha información.
+  </p>
+  <p>
+    Los datos personales que recabamos de usted serán utilizados para las siguientes finalidades, las cuales son necesarias para concretar nuestra relación con usted así como atender los servicios y/o pedidos que solicite:
+    <ul>
+      <li>Brindar un mejor servicio.</li>
+      <li>Entregar los productos que el cliente adquiera en nuestro sitio web.</li>
+      <li>Realizar encuestas de satisfacción y campañas de mercadotecnia.</li>
+    </ul>
+  </p>
+  <p>
+    Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:
+    <ul>
+      <li>Nombres;</li>
+      <li>Apellidos;</li>
+      <li>Nombre de usuario;</li>
+      <li>Correo electrónico;</li>
+      <li>Contraseña para el sitio web;</li>
+    </ul>
+  </p>
+  <p>
+    Por otra parte, informamos a usted, que sus datos personales no serán compartidos con ninguna autoridad, empresa, organización o persona distintas a nosotros y serán utilizados exclusivamente para los fines señalados.
+  </p>
+  <p>
+    Usted tiene en todo momento el derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); de igual manera, tiene derecho a que su información se elimine de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como también a oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.
+  </p>
+
+  <!-- Formulario para capturar datos personales -->
+  <h3>Formulario de Registro</h3>
+  <form id="user-data-form">
+    <label for="full-name">Nombre Completo</label>
+    <input type="text" id="full-name" name="full-name" required>
+
+    <label for="email">Correo Electrónico</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="username">Nombre de Usuario</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Contraseña</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Registrar</button>
+  </form>
+</div>
+
+<script>
+  function acceptPrivacy() {
+    // Ocultar el aviso de privacidad
+    document.getElementById('privacy-notice').style.display = 'none';
+    // Mostrar el contenido del aviso de privacidad
+    document.getElementById('privacy-content').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
