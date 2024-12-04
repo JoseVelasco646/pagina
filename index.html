@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aviso de Privacidad</title>
+  <title>Avisos de Privacidad</title>
   <style>
-    #privacy-content {
+    #privacy-content, #game-privacy-content {
       display: none;
       padding: 20px;
       font-size: 16px;
@@ -14,7 +14,7 @@
       margin-top: 20px;
     }
 
-    #privacy-notice {
+    #privacy-notice, #game-privacy-notice {
       position: fixed;
       top: 0;
       left: 0;
@@ -55,13 +55,13 @@
 </head>
 <body>
 
-<!-- Aviso de privacidad (popup) -->
+<!-- Aviso de privacidad (general) -->
 <div id="privacy-notice">
   <p>De conformidad con lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, Jose Velasco pone a su disposición el siguiente aviso de privacidad.</p>
   <button onclick="acceptPrivacy()">Aceptar</button>
 </div>
 
-<!-- Contenido del Aviso de Privacidad -->
+<!-- Contenido del Aviso de Privacidad General -->
 <div id="privacy-content">
   <p>
     Jose Manuel Velasco Garcia, es responsable del uso y protección de sus datos personales, en este sentido y atendiendo las obligaciones legales establecidas en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, a través de este instrumento se informa a los titulares de los datos, la información que de ellos se recaba y los fines que se le darán a dicha información.
@@ -110,12 +110,78 @@
   </form>
 </div>
 
+<!-- Aviso de privacidad para videojuego -->
+<div id="game-privacy-notice">
+  <p>De conformidad con lo establecido en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, Tu Videojuego Online pone a tu disposición el siguiente aviso de privacidad.</p>
+  <button onclick="acceptGamePrivacy()">Aceptar</button>
+</div>
+
+<!-- Contenido del Aviso de Privacidad para Videojuego -->
+<div id="game-privacy-content">
+  <p>
+    En Tu Videojuego Online, nos tomamos muy en serio la protección de tus datos personales. De acuerdo con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares, este aviso de privacidad tiene como objetivo informarte sobre la información que recopilamos de ti, cómo la utilizamos y las medidas que tomamos para protegerla.
+  </p>
+  <p>
+    Los datos personales que recabamos de ti serán utilizados para las siguientes finalidades, necesarias para concretar nuestra relación contigo como usuario de nuestro videojuego:
+    <ul>
+      <li>Crear y gestionar tu cuenta de usuario dentro del juego.</li>
+      <li>Mejorar tu experiencia de juego mediante personalización.</li>
+      <li>Realizar análisis para mejorar el juego y ofrecerte contenido relevante.</li>
+      <li>Enviar promociones y noticias sobre eventos especiales en el juego.</li>
+    </ul>
+  </p>
+  <p>
+    Para llevar a cabo las finalidades descritas en este aviso de privacidad, utilizaremos los siguientes datos personales:
+    <ul>
+      <li>Nombre completo;</li>
+      <li>Correo electrónico;</li>
+      <li>Nombre de usuario;</li>
+      <li>Edad (para verificar la adecuación de contenido);</li>
+      <li>Contraseña para tu cuenta en el juego;</li>
+    </ul>
+  </p>
+  <p>
+    Es importante que sepas que tus datos personales no serán compartidos con ninguna empresa externa, y serán utilizados exclusivamente para los fines establecidos en este aviso.
+  </p>
+  <p>
+    Tienes en todo momento el derecho de acceder a los datos personales que tenemos sobre ti, así como de solicitar su corrección, eliminación o la cancelación de los mismos. Además, tienes derecho a oponerte al uso de tus datos personales para fines específicos. Estos derechos se conocen como derechos ARCO (Acceso, Rectificación, Cancelación y Oposición).
+  </p>
+
+  <!-- Formulario para capturar datos personales -->
+  <h3>Formulario de Registro para el Juego</h3>
+  <form id="game-data-form">
+    <label for="game-full-name">Nombre Completo</label>
+    <input type="text" id="game-full-name" name="game-full-name" required>
+
+    <label for="game-email">Correo Electrónico</label>
+    <input type="email" id="game-email" name="game-email" required>
+
+    <label for="game-username">Nombre de Usuario</label>
+    <input type="text" id="game-username" name="game-username" required>
+
+    <label for="game-age">Edad</label>
+    <input type="text" id="game-age" name="game-age" required>
+
+    <label for="game-password">Contraseña</label>
+    <input type="password" id="game-password" name="game-password" required>
+
+    <button type="submit">Registrar</button>
+  </form>
+</div>
+
 <script>
   function acceptPrivacy() {
-    // Ocultar el aviso de privacidad
+    // Ocultar el aviso de privacidad general
     document.getElementById('privacy-notice').style.display = 'none';
-    // Mostrar el contenido del aviso de privacidad
+    // Mostrar el contenido del aviso de privacidad general
     document.getElementById('privacy-content').style.display = 'block';
+  }
+
+  function acceptGamePrivacy() {
+    // Ocultar el aviso de privacidad para videojuego
+    document.getElementById('game-privacy-notice').style.display = 'none';
+    // Mostrar el contenido del aviso de privacidad para videojuego
+    document.getElementById('game-privacy-content').style.display = 'block';
   }
 </script>
 
